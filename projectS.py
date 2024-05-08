@@ -1,6 +1,5 @@
 import discord
 import datetime
-import os
 
 from discord.ext import commands
 
@@ -17,5 +16,4 @@ async def on_ready():
     await bot.change_presence(activity=discord.Game("전역까지 "+diff.split(",")[0]))
     
 
-access_token = os.environ["BOT_TOKEN"]
-bot.run(access_token)
+bot.run("MTIzNzYxMzMxOTIwOTA5NTE2OQ.GOeTBh.PCa6xH0Z28gOj_XcJci8gEb0TwiHpproljAm1E")
