@@ -13,10 +13,11 @@ bot = commands.Bot(command_prefix='#',intents=discord.Intents.all())
  
 @bot.event
 async def on_ready():
+    print(f'Login bot: {bot.user}')
     while True:
-        print(f'Login bot: {bot.user}')
+        print(f'updated bot: {bot.user} /'+diff.split(",")[0])
         await bot.change_presence(activity=discord.Game("전역까지 "+diff.split(",")[0]))
-        time.sleep(10800)
+        time.sleep(60)
     
-bot.run("MTIzNzYxMzMxOTIwOTA5NTE2OQ.GjQP5L.gqROLqoE-LHzrGp3FOIekHSUCo_mNsRCnQEYCw")
+bot.run("token")
 
