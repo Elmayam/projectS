@@ -1,6 +1,7 @@
 import discord
 import datetime
 import time
+import asyncio
 
 from discord.ext import commands
 
@@ -17,7 +18,9 @@ async def on_ready():
     while True:
         print(f'updated bot: {bot.user} /'+diff.split(",")[0])
         await bot.change_presence(activity=discord.Game("전역까지 "+diff.split(",")[0]))
-        time.sleep(60)
+        await asyncio.sleep(10800)
+       
+        
     
-bot.run("token")
+bot.run("botToken")
 
