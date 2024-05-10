@@ -1,5 +1,6 @@
 import discord
 import datetime
+import time
 
 from discord.ext import commands
 
@@ -12,8 +13,10 @@ bot = commands.Bot(command_prefix='#',intents=discord.Intents.all())
  
 @bot.event
 async def on_ready():
-    print(f'Login bot: {bot.user}')
-    await bot.change_presence(activity=discord.Game("전역까지 "+diff.split(",")[0]))
+    while True:
+        print(f'Login bot: {bot.user}')
+        await bot.change_presence(activity=discord.Game("전역까지 "+diff.split(",")[0]))
+        time.sleep(10800)
     
+bot.run("MTIzNzYxMzMxOTIwOTA5NTE2OQ.GjQP5L.gqROLqoE-LHzrGp3FOIekHSUCo_mNsRCnQEYCw")
 
-bot.run("MTIzNzYxMzMxOTIwOTA5NTE2OQ.GOeTBh.PCa6xH0Z28gOj_XcJci8gEb0TwiHpproljAm1E")
